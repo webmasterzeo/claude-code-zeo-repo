@@ -1,43 +1,44 @@
 # Claude Code Zeo Repo
 
-Dit is de gedeelde skills-repo van ons agency. Iedereen die Claude Code gebruikt kan via deze repo dezelfde skills gebruiken. Skills worden centraal bijgehouden — updates die hier worden gepusht zijn direct beschikbaar voor het hele team.
+Dit is de gedeelde skills-repo van ons agency. Iedereen die Claude Code gebruikt binnen VS Code kan via deze repo dezelfde skills gebruiken. Skills worden centraal bijgehouden — updates die hier worden gepusht zijn direct beschikbaar voor het hele team.
 
 ## Wat zijn skills?
 
-Skills zijn instructiesets die Claude Code uitbreidt met gespecialiseerde kennis en workflows. Denk aan: advertising audits, SEO content plannen, en meer. Je activeert ze met een slash command, bijvoorbeeld `/ads-google` of `/seo-content-cluster`.
+Skills zijn instructiesets die Claude Code uitbreiden met gespecialiseerde kennis en workflows. Denk aan: advertising audits, SEO content plannen, en meer. Je activeert ze met een slash command, bijvoorbeeld `/ads-google` of `/seo-content-cluster`.
+
+---
 
 ## Vereisten
 
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) geïnstalleerd
-- [Git](https://git-scm.com/downloads) geïnstalleerd
-- Toegang tot deze GitHub repo (vraag een admin om je toe te voegen als collaborator)
+Zorg dat je de volgende zaken hebt geïnstalleerd voordat je begint:
 
-## Installatie
+1.  **[VS Code](https://code.visualstudio.com/)** (Visual Studio Code)
+2.  **[Node.js](https://nodejs.org/)** (Noodzakelijk voor Claude Code)
+3.  **Toegang tot deze GitHub repo** (Vraag een admin om je toe te voegen als collaborator)
 
-### 1. Clone de repo
+---
 
-Open je terminal en kies een locatie waar je de repo wilt neerzetten:
+## Installatie & Setup
 
-```bash
-git clone https://github.com/webmasterzeo/claude-code-zeo-repo.git
-```
+Volg deze stappen om de werkomgeving in te richten:
 
-### 2. Start Claude Code vanuit de repo
+### 1. Claude Extension & Login
+1.  Open **VS Code**.
+2.  Ga naar **Extensions** (icoontje in de zijbalk of `Ctrl+Shift+X`).
+3.  Zoek naar **Claude Code for VS** en installeer de extensie.
+4.  Log in via het **Webmaster account**.
 
-```bash
-cd claude-code-zeo-repo
-claude
-```
+### 2. Git & Repo installatie via Claude
+Je hoeft geen ingewikkelde terminal-commando's te gebruiken. Je kunt Claude simpelweg opdracht geven om de omgeving voor je klaar te zetten. Open de Claude chat in VS Code en typ:
 
-Dat is alles. Claude Code detecteert automatisch de `.claude/skills/` map en laadt alle skills.
+* **Stap A:** *"Vraag aan Claude om Git te installeren op dit systeem."*
+* **Stap B:** *"Vraag aan Claude om de github repo `https://github.com/webmasterzeo/claude-code-zeo-repo.git` te installeren en te openen."*
 
 ### 3. Controleer of het werkt
+Zodra de repo is geladen, detecteert Claude automatisch de `.claude/skills/` map. Typ in de chat:
 
-Typ in Claude Code:
-
-```
+```text
 /ads
-```
 
 Als je een advertising audit workflow te zien krijgt, werkt alles.
 
