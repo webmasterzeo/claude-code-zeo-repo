@@ -10,41 +10,63 @@ Skills zijn instructiesets die Claude Code uitbreiden met gespecialiseerde kenni
 
 ## Vereisten
 
-Zorg dat je de volgende zaken hebt geïnstalleerd voordat je begint:
+Installeer het volgende voordat je begint:
 
-1.  **[VS Code](https://code.visualstudio.com/)** (Visual Studio Code)
-2.  **[Node.js](https://nodejs.org/)** (Noodzakelijk voor Claude Code)
-3.  **Toegang tot deze GitHub repo** (Vraag een admin om je toe te voegen als collaborator)
+- [VS Code](https://code.visualstudio.com/)
+- [Node.js](https://nodejs.org/) (LTS versie)
+- [Git](https://git-scm.com/downloads)
+- Toegang tot deze GitHub repo (vraag een admin om je toe te voegen als collaborator)
 
 ---
 
-## Installatie & Setup
+## Eenmalige installatie
 
-Volg deze stappen om de werkomgeving in te richten:
+### Stap 1 — Claude Code extensie installeren
 
-### 1. Claude Extension & Login
-1.  Open **VS Code**.
-2.  Ga naar **Extensions** (icoontje in de zijbalk of `Ctrl+Shift+X`).
-3.  Zoek naar **Claude Code for VS** en installeer de extensie.
-4.  Log in via het **Webmaster account**.
+1. Open VS Code
+2. Ga naar Extensions (`Ctrl+Shift+X` / `Cmd+Shift+X`)
+3. Zoek naar **Claude Code** en installeer de extensie
+4. Log in via het Webmaster account
 
-### 2. Git & Repo installatie via Claude
-Je hoeft geen ingewikkelde terminal-commando's te gebruiken. Je kunt Claude simpelweg opdracht geven om de omgeving voor je klaar te zetten. Open de Claude chat in VS Code en typ:
+### Stap 2 — Repo clonen
 
-* **Stap A:** *"Vraag aan Claude om Git te installeren op dit systeem."*
-* **Stap B:** *"Vraag aan Claude om de github repo `https://github.com/webmasterzeo/claude-code-zeo-repo.git` te installeren en te openen."*
+1. Druk op `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`)
+2. Typ: **Git: Clone**
+3. Plak de URL: `https://github.com/webmasterzeo/claude-code-zeo-repo.git`
+4. Kies een map op je computer en klik **Open**
 
-### 3. Controleer of het werkt
-Zodra de repo is geladen, detecteert Claude automatisch de `.claude/skills/` map. Typ in de chat:
+### Stap 3 — Skills installeren
 
-```text
-/ads
+1. Druk op `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`)
+2. Typ: **Tasks: Run Task**
+3. Kies: **Install Skills**
+4. Wacht op de bevestiging: `✓ Skills geïnstalleerd!`
+5. Herstart de Claude Code extensie in VS Code
 
-Als je een advertising audit workflow te zien krijgt, werkt alles.
+De skills zijn nu beschikbaar in **elke map** die je opent in VS Code.
 
-## Gebruik
+### Stap 4 — Controleer of het werkt
 
-Alle skills zijn beschikbaar als slash commands. Typ `/` in Claude Code om een overzicht te zien van beschikbare skills. Enkele voorbeelden:
+Typ in Claude Code:/ads
+
+
+Als je een advertising audit workflow ziet, werkt alles.
+
+---
+
+## Up-to-date blijven
+
+Wanneer er nieuwe skills worden toegevoegd of bestaande worden bijgewerkt:
+
+1. Druk op `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`)
+2. Typ: **Tasks: Run Task**
+3. Kies: **Update Skills**
+4. Wacht op de bevestiging: `✓ Skills bijgewerkt!`
+5. Herstart de Claude Code extensie in VS Code
+
+---
+
+## Beschikbare skills
 
 | Command | Wat het doet |
 |---|---|
@@ -63,19 +85,10 @@ Alle skills zijn beschikbaar als slash commands. Typ `/` in Claude Code om een o
 | `/ads-plan` | Strategisch advertentieplan opstellen |
 | `/seo-content-cluster` | SEO content clusters & keyword research |
 
-## Up-to-date blijven
-
-Wanneer er skills worden toegevoegd of bijgewerkt, pull je de laatste versie:
-
-```bash
-cd claude-code-zeo-repo
-git pull
-```
-
-Start daarna Claude Code opnieuw om de wijzigingen te laden.
+---
 
 ## Problemen?
 
-- **Skills verschijnen niet?** Zorg dat je Claude Code start vanuit de `claude-code-zeo-repo` map, niet vanuit een andere directory.
+- **Skills verschijnen niet?** Voer de **Install Skills** taak opnieuw uit en herstart Claude Code.
 - **Geen toegang tot de repo?** Vraag een admin om je GitHub-account toe te voegen als collaborator.
-- **Verouderde skills?** Draai `git pull` en herstart Claude Code.
+- **Nieuwe skills worden niet geladen?** Voer de **Update Skills** taak uit en herstart
